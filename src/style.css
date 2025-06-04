@@ -39,7 +39,7 @@ body::-webkit-scrollbar{
 }
 /* loader */
 
-/* .loader {
+.loader {
       height: 100vh;
       width: 100%;
       background-color: white;
@@ -74,7 +74,7 @@ body::-webkit-scrollbar{
       to {
         width: 100%;
       }
-    } */
+    }
 
 /* loader end */
 .main{
@@ -193,6 +193,8 @@ body::-webkit-scrollbar{
   font-size: 1.5vw;
   color: gray;
   margin-top: 1vw;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .heroSec h1 {
@@ -203,6 +205,9 @@ body::-webkit-scrollbar{
   background: linear-gradient(to bottom, black, rgb(107, 107, 107));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  transform: translateY(20px);
 
 }
 
@@ -232,6 +237,7 @@ body::-webkit-scrollbar{
   z-index: 10;
 }
 
+
 /* Desktop Footer Ho Gaya */
 
 .footer{
@@ -242,6 +248,8 @@ body::-webkit-scrollbar{
   display: flex;
   justify-content: space-between;
   padding: 0 4vw;
+  opacity: 0;
+  transform: translateY(100px);
 
   font-weight: 100;
   font-size: 0.8vw;

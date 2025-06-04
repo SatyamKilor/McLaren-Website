@@ -57,63 +57,66 @@ window.addEventListener("load", () => {
     markers: false
   });
 
-  // gsap.from('#logo',{
-  //   top: "45%",
-  //   left:"50%",
-  //   height:"500px",
-  //   duration:1,
-  //   delay: 2
-  // });
+  gsap.to('.loader',{
+    y:"-100%",
+    duration:1,
+    delay: 2,
+    onComplete: () => {
+      document.querySelector('.loader').style.display = 'none';
+    }
+  });
 
-  // gsap.to('.loader',{
-  //   y:"-100%",
-  //   duration:1,
-  //   delay: 2
-  // });
 
-  
-const buttonTL = gsap.timeline({ delay: 2 });
+  gsap.from('#logo',{
+    top: "45%",
+    left:"50%",
+    height:"500px",
+    duration:1,
+    delay: 2,
+    onComplete: ()=>{
+      const AnimationTL = gsap.timeline();
 
-  buttonTL.to('.ri-menu-line',
-    {
-      top: "6%",
-      duration: 0.5,
-      ease: 'power2.inOut',
-    },'a');
+        AnimationTL.to('.ri-menu-line',
+          {
+            top: "6%",
+            duration: 0.5,
+            ease: 'power2.inOut',
+          },'a');
 
-buttonTL.from('.heroSec h2',{
-  y:20,
-  opacity:0,
-  duration:1.2,
-  ease: 'expo.out'
-}, 'a');
+        AnimationTL.to('.heroSec h2',{
+          y:0,
+          opacity:1,
+          duration:1.2,
+          ease: 'expo.out'
+        }, 'a');
 
-buttonTL.from('.heroSec h1',{
-  y:20,
-  opacity:0,
-  duration:1.2,
-  ease: 'expo.out'
-}, 'a');
+        AnimationTL.to('.heroSec h1',{
+          y:0,
+          opacity:1,
+          duration:1.2,
+          ease: 'expo.out'
+        }, 'a');
 
-  buttonTL.to('.heroSec button', {
-    opacity: 1,
-    duration: 0.4,
-    ease: 'expo.out'
-  }, 'a')
-  .to('.heroSec button', {
-    scale: 1,
-    duration: 0.8,
-    delay: 0.2,
-    ease: 'expo.out'
-  }, 'a');
-
-  buttonTL.from('.footer',{
-    opacity:0,
-    y: 100,
-    duration:0.4,
-    ease: 'expo.out'
-  }, 'a');
-
+        AnimationTL.to('.heroSec button', {
+          opacity: 1,
+          duration: 0.4,
+          ease: 'expo.out'
+        }, 'a')
+        .to('.heroSec button', {
+        scale: 1,
+        duration: 0.8,
+        delay: 0.2,
+        ease: 'expo.out'
+      }, 'a');
+    
+        AnimationTL.to('.footer',{
+          opacity:1,
+          y: 0,
+          duration:0.4,
+          ease: 'expo.out'
+        }, 'a');
+      }
+    });
 });
 
 const scrollBar = document.querySelector('.scrollBar');
