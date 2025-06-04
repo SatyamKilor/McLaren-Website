@@ -37,7 +37,46 @@ html, body {
 body::-webkit-scrollbar{
   display: none;
 }
+/* loader */
 
+/* .loader {
+      height: 100vh;
+      width: 100%;
+      background-color: white;
+      position: relative;
+      z-index: 110;
+    }
+
+    .loadingBar {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      height: 30px;
+      background-color: rgb(210, 210, 210);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0%;
+      background-color: black;
+      border-radius: 20px;
+      animation: fillBar 1.7s ease-in-out forwards;
+    }
+
+    @keyframes fillBar {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    } */
+
+/* loader end */
 .main{
   height: 100vh;
   width: 100%;
@@ -112,14 +151,14 @@ body::-webkit-scrollbar{
   transform: translate(-50%, -50%);
   height: 200px;
   width: auto;
-  z-index: 90;
+  z-index: 150;
 }
 
 .ri-menu-line{
   color: black;
   font-size: 2vw;
   position: absolute;
-  top: 6%;
+  top: -10%;
   right: 2%;
   transform: translate(-50%, -50%);
   z-index: 99;
@@ -177,6 +216,8 @@ body::-webkit-scrollbar{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 90;
+  scale: 0.5;
+  opacity: 0;
 }
 
 .heroSec button:hover{

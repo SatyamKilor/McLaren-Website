@@ -47,8 +47,6 @@ customScroll.addEventListener("scroll", () => {
   isSyncingScroll = false;
 });
 
-let button = document.querySelector(".heroSec button");
-
 window.addEventListener("load", () => {
   ScrollTrigger.create({
     trigger: ".main",
@@ -58,6 +56,64 @@ window.addEventListener("load", () => {
     pinSpacing: false,
     markers: false
   });
+
+  // gsap.from('#logo',{
+  //   top: "45%",
+  //   left:"50%",
+  //   height:"500px",
+  //   duration:1,
+  //   delay: 2
+  // });
+
+  // gsap.to('.loader',{
+  //   y:"-100%",
+  //   duration:1,
+  //   delay: 2
+  // });
+
+  
+const buttonTL = gsap.timeline({ delay: 2 });
+
+  buttonTL.to('.ri-menu-line',
+    {
+      top: "6%",
+      duration: 0.5,
+      ease: 'power2.inOut',
+    },'a');
+
+buttonTL.from('.heroSec h2',{
+  y:20,
+  opacity:0,
+  duration:1.2,
+  ease: 'expo.out'
+}, 'a');
+
+buttonTL.from('.heroSec h1',{
+  y:20,
+  opacity:0,
+  duration:1.2,
+  ease: 'expo.out'
+}, 'a');
+
+  buttonTL.to('.heroSec button', {
+    opacity: 1,
+    duration: 0.4,
+    ease: 'expo.out'
+  }, 'a')
+  .to('.heroSec button', {
+    scale: 1,
+    duration: 0.8,
+    delay: 0.2,
+    ease: 'expo.out'
+  }, 'a');
+
+  buttonTL.from('.footer',{
+    opacity:0,
+    y: 100,
+    duration:0.4,
+    ease: 'expo.out'
+  }, 'a');
+
 });
 
 const scrollBar = document.querySelector('.scrollBar');
@@ -92,6 +148,8 @@ window.addEventListener('mouseup', () => {
   isDragging = false;
   document.body.style.userSelect = '';
 });
+
+
 
 
 //THREE JS
