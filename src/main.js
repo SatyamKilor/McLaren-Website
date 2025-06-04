@@ -310,6 +310,54 @@ gsap.to({}, {
   }
 });
 
+gsap.to('#textLineHighlight', {
+  scrollTrigger: {
+    trigger: "#webgl",
+    start: "top -60%",
+    end: "bottom top",
+    scrub: true,
+    markers: false
+  },
+  opacity: 1,
+  ease: 'expoScale(0.5,7,none)'
+});
+
+gsap.to('#doorText', {
+  scrollTrigger: {
+    trigger: "#webgl",
+    start: "top -60%",
+    end: "bottom top",
+    scrub: true,
+    markers: false
+  },
+  opacity: 1,
+  ease: 'expoScale(0.5,7,none)'
+});
+
+gsap.to('#textLineHighlight2', {
+  scrollTrigger: {
+    trigger: "#webgl",
+    start: "top -60%",
+    end: "bottom top",
+    scrub: true,
+    markers: false
+  },
+  opacity: 1,
+  ease: 'expoScale(0.5,7,none)'
+});
+
+gsap.to('#headlightText', {
+  scrollTrigger: {
+    trigger: "#webgl",
+    start: "top -60%",
+    end: "bottom top",
+    scrub: true,
+    markers: false
+  },
+  opacity: 1,
+  ease: 'expoScale(0.5,7,none)'
+});
+
 });
 
 
