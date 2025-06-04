@@ -1,0 +1,257 @@
+
+@font-face {
+    font-family: heading;
+    src: url(/fonts/droid-sans.bold.ttf);
+}
+
+@font-face {
+    font-family: subheading;
+    src: url(/fonts/TASAExplorer-Bold-BF64892795eea29.otf);
+}
+
+@font-face {
+    font-family: lightfont;
+    src: url(/fonts/TASAExplorer-Regular-BF64892796055a5.otf);
+}
+
+@font-face {
+  font-family: salin;
+  src: url(/fonts/Fontspring-DEMO-salin-extrabold.otf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: subheading;
+  background-color: rgb(211, 211, 211);  
+}
+
+
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.main{
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle, transparent, #00000057);
+}
+
+.scrollesh{
+  height: 100vh;
+  width: 100%;
+}
+
+.scrollBar{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30%;
+  width: 5%;
+  z-index: 100;
+  overflow-y: hidden;
+  cursor: grab;
+}
+
+.scrollBar:active {
+  cursor: grabbing;
+}
+
+.scrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollBar .lineContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.scrollBar .lineContainer .line1{
+  height: 2px;
+  width: 40px;
+  background-color: black;
+}
+.scrollBar .lineContainer .line2{
+  height: 2px;
+  width: 16px;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+.scrollBar .lineContainer .line3{
+  height: 2px;
+  width: 32px;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+.scrollBar .lineContainer .line4{
+  height: 2px;
+  width: 24px;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+/* Desktop Navbar Ho Gaya */
+.navBar{
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+
+#logo{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: auto;
+  z-index: 90;
+}
+
+.ri-menu-line{
+  color: black;
+  font-size: 2vw;
+  position: absolute;
+  top: 6%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.ri-menu-line:hover{
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Desktop Hero Ho Gaya */
+
+.heroSec{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heroSec h2{
+  font-size: 1.5vw;
+  color: gray;
+  margin-top: 1vw;
+}
+
+.heroSec h1 {
+  font-family: salin;
+  font-size: 8vw;
+  letter-spacing: -6px;
+
+  background: linear-gradient(to bottom, black, rgb(107, 107, 107));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.heroSec button{
+  padding: 0.8vw 2.5vw;
+  background: transparent;
+  border: 1px solid black;
+  font-family: subheading;
+  border-radius: 30px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 90;
+}
+
+.heroSec button:hover{
+  background: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#webgl{
+  position: absolute;
+  top: 20%;
+  z-index: 10;
+}
+
+/* Desktop Footer Ho Gaya */
+
+.footer{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4vw;
+
+  font-weight: 100;
+  font-size: 0.8vw;
+  color: rgba(86, 86, 86, 0.584);
+}
+
+
+ @media screen and (max-width: 720px){
+
+  .scrollBar{
+    display: none;
+  }
+
+  /* Nav */
+  #logo {
+    height: 100px;
+    left: 20%;
+  }
+   .ri-menu-line{
+    font-size: 3vh;
+    right: 0;
+  }
+
+  /* Hero */
+
+  .heroSec h2 {
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+  }
+
+  .heroSec button{
+    padding: 1.5vh 5vh;
+    border-radius: 30px;
+    font-size: 2.2vh;
+  }
+
+  .heroSec h1 {
+    font-size: 6vh;
+    margin-bottom: 2vw;
+    letter-spacing: -2px;
+  }
+
+  #webgl{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Footer */
+  .footer{
+    font-size: 1vh;
+    padding: 0 5vw;
+  }
+ }
