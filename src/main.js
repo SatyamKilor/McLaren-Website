@@ -183,7 +183,7 @@ const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x8d8d8d, 3 );
 const loader = new GLTFLoader();
 
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath(import.meta.env.BASE_URL + '/draco/');
+dracoLoader.setDecoderPath(import.meta.env.BASE_URL + 'draco/');
 loader.setDRACOLoader(dracoLoader);
 
 const floorShader = {
@@ -233,7 +233,7 @@ shadowCatcher.receiveShadow = true;
 scene.add(shadowCatcher);
 
 // Load model
-loader.load(import.meta.env.BASE_URL + '/models/carWithAnimation.glb', (gltf) => {
+loader.load(import.meta.env.BASE_URL + 'models/carWithAnimation.glb', (gltf) => {
   let model = gltf.scene;
   scene.add(model);
 
@@ -362,7 +362,7 @@ gsap.to('#headlightText', {
 
 
 new RGBELoader()
-  .setPath(import.meta.env.BASE_URL + '/textures/')
+  .setPath(import.meta.env.BASE_URL + 'textures/')
   .load('lobe.hdr', function(texture)
   {
     texture.mapping = THREE.EquirectangularReflectionMapping;
