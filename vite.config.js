@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/McLaren-Website',
-})
+  base: '/McLaren-Website/', // 👈 must match your deployed subpath
+});
