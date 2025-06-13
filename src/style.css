@@ -233,16 +233,16 @@ body::-webkit-scrollbar{
 
 #textLineHighlight{
   position: absolute;
-  top: 48%;
-  right: 20%;
+  top: 45%;
+  right: 12%;
   transform: translate(-50%, -50%);
   opacity: 0;
 }
 
 #doorText{
   position: absolute;
-  top: 45%;
-  right: 20%;
+  top: 40%;
+  right: 12%;
   transform: translate(-50%, -50%);
   text-align: left;
   opacity: 0;
@@ -250,8 +250,8 @@ body::-webkit-scrollbar{
 
 #textLineHighlight2{
   position: absolute;
-  top: 65%;
-  left:30%;
+  top: 60%;
+  left:27%;
   transform: translate(-50%, -50%);
   z-index: 100;
   opacity: 0;
@@ -259,8 +259,8 @@ body::-webkit-scrollbar{
 
 #headlightText{
   position: absolute;
-  top: 65%;
-  left:23%;
+  top: 60%;
+  left:19%;
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: right;
@@ -269,7 +269,7 @@ body::-webkit-scrollbar{
 
 #webgl{
   position: absolute;
-  top: 20%;
+  top: 8%;
   z-index: 10;
 }
 
