@@ -47,7 +47,7 @@ customScroll.addEventListener("scroll", () => {
   isSyncingScroll = false;
 });
 
-window.addEventListener("load", () => {
+function afterLoadAnimations() {
   ScrollTrigger.create({
     trigger: ".main",
     start: "top top",
@@ -117,7 +117,7 @@ window.addEventListener("load", () => {
         }, 'a');
       }
     });
-});
+  }
 
 const scrollBar = document.querySelector('.scrollBar');
 
@@ -232,10 +232,21 @@ shadowCatcher.rotation.x = -Math.PI / 2;
 shadowCatcher.receiveShadow = true;
 scene.add(shadowCatcher);
 
+let modealLoaded = false;
+console.log("Model is not loaded yet");
+
+
 // Load model
 loader.load(import.meta.env.BASE_URL + 'models/carWithAnimation.glb', (gltf) => {
   let model = gltf.scene;
   scene.add(model);
+  
+  modealLoaded = true;
+  console.log("Model is now loaded");
+  if(modealLoaded){
+    afterLoadAnimations();
+  }
+  
 
   
 model.traverse(function(object)
