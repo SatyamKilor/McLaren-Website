@@ -273,6 +273,32 @@ body::-webkit-scrollbar{
   z-index: 10;
 }
 
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.318); /* translucent white */
+  backdrop-filter: blur(15px); /* the blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border for contrast */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* optional shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ri-close-circle-line{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2vw;
+}
 
 /* Desktop Footer Ho Gaya */
 

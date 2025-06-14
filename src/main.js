@@ -119,6 +119,40 @@ function afterLoadAnimations() {
     });
   }
 
+
+  // localStorage.removeItem("alertShown");
+
+
+     if (!localStorage.getItem("alertShown")) {
+    gsap.from('.alert', {
+      opacity: 0,
+      delay: 4,
+      duration: 1
+    });
+
+    // Show the alert (in case it's hidden by default)
+    document.querySelector(".alert").style.display = "block";
+
+    // Mark as shown
+    localStorage.setItem("alertShown", "true");
+  } else {
+    // Hide the alert if it's already been shown before
+    document.querySelector(".alert").style.display = "none";
+  }
+
+  // Setup close button functionality
+  let alertWindow = document.querySelector(".alert");
+  let closeAlertBtn = document.querySelector(".ri-close-circle-line");
+
+  if (closeAlertBtn) {
+    closeAlertBtn.addEventListener('click', () => {
+      alertWindow.style.display = "none";
+    });
+  }
+  
+
+
+
 const scrollBar = document.querySelector('.scrollBar');
 
 let isDragging = false;
